@@ -41,9 +41,6 @@ public class GymCustomerMenu {
         }
     }
 
-    private void viewWaitlistStatus() {
-    }
-
     public void bookSlot(int userId) {
 
     }
