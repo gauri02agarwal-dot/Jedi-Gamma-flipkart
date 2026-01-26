@@ -6,12 +6,9 @@ import java.util.Queue;
 public class WaitingList {
     private int waitListId;
     private int slotId;
-    private String date; // Added date to track waitlist for specific days
+    private String date;
     private Queue<Integer> waitingQueue;
 
-    // Inside WaitingList.java
-
-    // Keep your 3-argument constructor
     public WaitingList(int waitListId, int slotId, String date) {
         this.waitListId = waitListId;
         this.slotId = slotId;
@@ -19,7 +16,6 @@ public class WaitingList {
         this.waitingQueue = new LinkedList<>();
     }
 
-    // Add this 2-argument constructor back to handle the old code
     public WaitingList(int waitListId, int slotId) {
         this.waitListId = waitListId;
         this.slotId = slotId;

@@ -30,7 +30,6 @@ public class BookingBusinessService {
 
         bookingDb.remove(bookingToCancel);
 
-        // Find the slot to update availability
         Slot slot = masterSlots.stream()
                 .filter(s -> s.getSlotId() == bookingToCancel.getSlotId())
                 .findFirst().orElse(null);

@@ -17,7 +17,6 @@ public class Booking {
         this.totalCost = totalCost;
     }
 
-    // Getters and Setters
     public int getBookingId() { return bookingId; }
     public int getUserId() { return userId; }
     public int getSlotId() { return slotId; }

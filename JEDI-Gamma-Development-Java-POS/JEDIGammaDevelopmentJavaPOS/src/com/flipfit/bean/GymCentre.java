@@ -22,14 +22,13 @@ public class GymCentre {
     public List<Slot> getFilledSlots() {
         List<Slot> filledSlots = new ArrayList<>();
         for (Slot s : this.slots) {
-            if (s.isFull()) { // This calls the helper method you wrote in Slot.java
+            if (s.isFull()) {
                 filledSlots.add(s);
             }
         }
         return filledSlots;
     }
 
-    // Parameterized Constructor
     public GymCentre(int centreId, String centreName, String openTime, int price) {
         this.centreId = centreId;
         this.centreName = centreName;

@@ -12,7 +12,6 @@ public class FlipFitApplication {
         Scanner scanner = new Scanner(System.in);
         BookingBusinessService bookingBusiness = new BookingBusinessService();
 
-        // Initial setup for the Gym (You could also make this dynamic!)
         GymCentre gc1 = new GymCentre(1, "Mahadevapura", "06:00 - 21:00", 500);
         List<Slot> masterSlot = new ArrayList<>();
         masterSlot.add(new Slot(1, 6, 2)); // Capacity 2 for testing waitlist
@@ -50,7 +49,6 @@ public class FlipFitApplication {
                     System.out.print("Enter Slot ID to book: ");
                     int slotId = scanner.nextInt();
 
-                    // Find the actual slot object based on ID entered
                     Slot selectedSlot = findSlotById(gc1.getSlots(), slotId);
                     if (selectedSlot != null) {
                         bookingBusiness.createBooking(userId, gc1.getCentreId(), selectedSlot, 1, gc1.getPrice());
@@ -82,7 +80,6 @@ public class FlipFitApplication {
         scanner.close();
     }
 
-    // Helper method to find a slot object in the list by its ID
     private static Slot findSlotById(List<Slot> slots, int id) {
         for (Slot s : slots) {
             if (s.getSlotId() == id) return s;
@@ -90,7 +87,6 @@ public class FlipFitApplication {
         return null;
     }
 
-    /* --- Existing Display Methods remain the same below --- */
     private static void displaySystemState(List<Slot> slots, List<Booking> bookings) {
         System.out.println("\n" + "=".repeat(60));
         System.out.println("                CURRENT SYSTEM SNAPSHOT");

@@ -17,8 +17,7 @@ public class Slot {
         this.slotId = slotId;
         this.startTime = startTime;
         this.maximumSeats = maximumSeats;
-        this.availableSeats = maximumSeats; // Initially, all seats are available
-        // Automatically link a new WaitingList to this slot
+        this.availableSeats = maximumSeats;
         this.waitingList = new WaitingList(slotId, slotId);
     }
 
