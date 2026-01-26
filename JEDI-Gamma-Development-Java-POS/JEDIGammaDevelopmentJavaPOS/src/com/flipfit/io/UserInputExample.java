@@ -1,14 +1,15 @@
 package com.flipkart.io;
 
 import java.util.Scanner;
+import com.flipfit.client.GymCustomerMenu; // Import your menu class
 
 public class UserInputExample {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        GymCustomerMenu customerMenu = new GymCustomerMenu(); // Initialize your menu
         int option;
 
-        // Using do-while loop as per assignment requirements
         do {
             System.out.println("\nWelcome to the Flipfit Application for GYM");
             System.out.println("1. Login");
@@ -20,7 +21,6 @@ public class UserInputExample {
             
             option = scan.nextInt();
 
-            // Using if-else statements for main menu as per assignment
             if (option == 1) {
                 System.out.println("--- Login ---");
                 System.out.print("Username: ");
@@ -31,13 +31,15 @@ public class UserInputExample {
                 System.out.println("Role: 1. GYMOwner 2. GymCustomer 3. GymAdmin");
                 int roleChoice = scan.nextInt();
 
-                // Using switch case for role selection as per assignment
                 switch (roleChoice) {
                     case 1:
                         System.out.println("Displaying GymOwner Menu for " + username);
                         break;
                     case 2:
+                        // --- YOUR MODULE STARTS HERE ---
                         System.out.println("Displaying GymCustomer Menu for " + username);
+                        // Assuming userId 501 for hardcoded demonstration
+                        customerMenu.displayCustomerMenu(501); 
                         break;
                     case 3:
                         System.out.println("Displaying GymAdmin Menu for " + username);
@@ -57,7 +59,7 @@ public class UserInputExample {
                 System.out.println("Invalid choice! Please enter a number between 1 and 5.");
             }
 
-        } while (option != 5); // Loop continues until user selects Exit (5)
+        } while (option != 5);
 
         scan.close();
     }
