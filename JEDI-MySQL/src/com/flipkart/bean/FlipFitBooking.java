@@ -6,6 +6,7 @@ package com.flipkart.bean;
  * 
  * @author gamma-group
  */
+
 public class FlipFitBooking {
     private String bookingID;
     private String userID;
@@ -29,6 +30,7 @@ public class FlipFitBooking {
      * @param userID     ID of the user making the booking
      * @param scheduleID ID of the schedule being booked
      */
+    
     public FlipFitBooking(String bookingID, String userID, String scheduleID) {
         this.bookingID = bookingID;
         this.userID = userID;
@@ -40,6 +42,7 @@ public class FlipFitBooking {
      * 
      * @return Booking ID
      */
+    
     public String getBookingID() {
         return bookingID;
     }
@@ -49,6 +52,7 @@ public class FlipFitBooking {
      * 
      * @param bookingID Booking ID to set
      */
+    
     public void setBookingID(String bookingID) {
         this.bookingID = bookingID;
     }
@@ -58,6 +62,7 @@ public class FlipFitBooking {
      * 
      * @return User ID
      */
+    
     public String getUserID() {
         return userID;
     }
@@ -67,6 +72,7 @@ public class FlipFitBooking {
      * 
      * @param userID User ID to set
      */
+    
     public void setUserID(String userID) {
         this.userID = userID;
     }
@@ -80,11 +86,13 @@ public class FlipFitBooking {
         return scheduleID;
     }
 
+    
     /**
      * Sets the schedule ID associated with the booking.
      * 
      * @param scheduleID Schedule ID to set
      */
+    
     public void setScheduleID(String scheduleID) {
         this.scheduleID = scheduleID;
     }
